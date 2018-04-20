@@ -1,4 +1,4 @@
-<img src="https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png" align="right" width="64" height="64">
+[<img src="https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png" align="right" width="64" height="64">](https://github.com/AurelienLourot/lsankidb)
 
 # lsankidb
 

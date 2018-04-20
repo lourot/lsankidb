@@ -26,6 +26,9 @@ $ sudo pip3 install lsankidb
 
 ## Changelog
 
+**0.0.2** (2018-04-20):
+  * Cosmetic improvements to the [PyPI page](https://pypi.org/pypi/lsankidb/).
+
 **0.0.1** (2018-04-20):
   * Initial version.
 

@@ -8,6 +8,11 @@ setup(name='lsankidb',
 
       #FIXME this duplicates README.md
       long_description="""
+.. image:: https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png
+   :height: 64px
+   :width: 64px
+   :align: right
+
 lsankidb
 ========
 

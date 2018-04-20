@@ -1,3 +1,5 @@
+<img src="https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png" align="right" width="64" height="64">
+
 # lsankidb
 
 `ls` for your local [Anki](https://apps.ankiweb.net/) database.

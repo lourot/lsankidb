@@ -26,6 +26,15 @@ French
 $ sudo pip3 install lsankidb
 ```
 
+## Team
+
+This theme is maintained by the following person(s) and a bunch of
+[awesome contributors](https://github.com/AurelienLourot/lsankidb/graphs/contributors).
+
+[![AurelienLourot](https://avatars0.githubusercontent.com/u/11795312?v=4&s=70)](https://github.com/AurelienLourot) |
+--- |
+[Aurelien Lourot](https://github.com/AurelienLourot) |
+
 ## Changelog
 
 **0.0.2** (2018-04-20):
@@ -33,7 +42,3 @@ $ sudo pip3 install lsankidb
 
 **0.0.1** (2018-04-20):
   * Initial version.
-
-## Contributors
-
-* [Aurelien Lourot](http://github.com/AurelienLourot/)

@@ -15,3 +15,18 @@ French
     ['Hello', 'Bonjour']
     ['How are you?', 'Comment ça va ?']
 ```
+
+## Installation
+
+```bash
+$ sudo pip3 install lsankidb
+```
+
+## Changelog
+
+**0.0.1** (2018-04-20):
+  * Initial version.
+
+## Contributors
+
+* [Aurelien Lourot](http://github.com/AurelienLourot/)

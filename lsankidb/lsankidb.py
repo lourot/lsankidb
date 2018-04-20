@@ -1,10 +1,14 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import AnkiTools.tools.read
 import argparse
 import os
 import sqlite3
 import sys
+
+import AnkiTools.tools.read
+
+from . import __version__
 
 class Card:
     def __init__(self, content):
@@ -66,6 +70,8 @@ def main():
                         return os.path.join(root, name)
 
     parser = argparse.ArgumentParser(description='"ls" for your local Anki database.')
+    parser.add_argument('--version', action='version',
+                        version='%(prog)s version ' + __version__)
     parser.add_argument('PATH', nargs='?',
         help='path to your DB file (e.g. "~/.local/share/Anki2/User/collection.anki2")')
     args = parser.parse_args(sys.argv[1:])

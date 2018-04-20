@@ -6,7 +6,7 @@
 
 `ls` for your local [Anki](https://apps.ankiweb.net/) database.
 
-Dump all your Anki terms in order to save them, search them, `grep` them or `diff` them.
+Dump/Print all your Anki terms in order to save them, search them, `grep` them or `diff` them.
 
 ```bash
 $ lsankidb
@@ -25,6 +25,8 @@ French
 ```bash
 $ sudo pip3 install lsankidb
 ```
+
+Validated against Anki 2.0.50 on Ubuntu 14.04.
 
 ## Team
 

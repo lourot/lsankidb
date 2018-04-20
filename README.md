@@ -1,0 +1,17 @@
+# lsankidb
+
+`ls` for your local [Anki](https://apps.ankiweb.net/) database.
+
+Dump all your Anki terms in order to save them, search them, `grep` them or `diff` them.
+
+```bash
+$ lsankidb
+Listing /home/me/.local/share/Anki2/User 1/collection.anki2 ...
+
+German
+    ['Hello', 'Hallo']
+    ['How are you?', "Wie geht's?"]
+French
+    ['Hello', 'Bonjour']
+    ['How are you?', 'Comment ça va ?']
+```

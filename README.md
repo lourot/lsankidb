@@ -28,7 +28,7 @@ $ sudo pip3 install lsankidb
 
 ## Team
 
-This theme is maintained by the following person(s) and a bunch of
+This project is maintained by the following person(s) and a bunch of
 [awesome contributors](https://github.com/AurelienLourot/lsankidb/graphs/contributors).
 
 [![AurelienLourot](https://avatars0.githubusercontent.com/u/11795312?v=4&s=70)](https://github.com/AurelienLourot) |

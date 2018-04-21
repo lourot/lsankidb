@@ -64,3 +64,56 @@ class LsankidbTests(TestCase):
         mock_walk.return_value = [('/root', [], ['unsupported.ext', 'unsupported2.ext'])]
 
         self.assertIsNone(lsankidb._find_db_path('/search/here'))
+
+class DbTests(TestCase):
+    @mock.patch('AnkiTools.tools.read.readAnki2')
+    def test_init_reads_decks_and_cards(self, mock_read):
+        mock_read.return_value.__enter__.return_value.decks = {
+            '1': {
+                'did': '1',
+                'name': 'german',
+            },
+            '2': {
+                'did': '2',
+                'name': 'french',
+            },
+        }
+        mock_read.return_value.__enter__.return_value.cards = {
+            '10': {
+                'did': '1',
+                'note': {
+                    'content': 'a',
+                },
+            },
+            '11': {
+                'did': '1',
+                'note': {
+                    'content': 'b',
+                },
+            },
+            '20': {
+                'did': '2',
+                'note': {
+                    'content': 'c',
+                },
+            },
+        }
+
+        self.assertEqual("""\
+french
+    c
+german
+    a
+    b""", str(lsankidb.Db('/path/to/db.anki2')))
+
+    def test_init_fails_if_unsupported_extension(self):
+        with self.assertRaises(KeyError):
+            lsankidb.Db('/path/to/unsupported.ext')
+
+    @mock.patch('AnkiTools.tools.read.readApkg')
+    def test_init_supports_apkg_extension(self, mock_read):
+        db_path = '/path/to/db.apkg'
+
+        lsankidb.Db(db_path)
+
+        mock_read.assert_called_once_with(db_path)

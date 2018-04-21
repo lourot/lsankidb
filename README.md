@@ -43,6 +43,9 @@ This project is maintained by the following person(s) and a bunch of
 
 ## Changelog
 
+**1.0.0** (2018-04-21):
+  * Removed duplicate cards from the output.
+
 **0.0.2** (2018-04-20):
   * Cosmetic improvements to the [PyPI page](https://pypi.org/pypi/lsankidb/).
 

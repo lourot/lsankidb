@@ -117,3 +117,30 @@ german
         lsankidb.Db(db_path)
 
         mock_read.assert_called_once_with(db_path)
+
+    @mock.patch('AnkiTools.tools.read.readAnki2')
+    def test_init_removes_duplicate_cards(self, mock_read):
+        mock_read.return_value.__enter__.return_value.decks = {
+            '1': {
+                'did': '1',
+                'name': 'german',
+            },
+        }
+        mock_read.return_value.__enter__.return_value.cards = {
+            '10': {
+                'did': '1',
+                'note': {
+                    'content': 'a',
+                },
+            },
+            '11': {
+                'did': '1',
+                'note': {
+                    'content': 'a',
+                },
+            },
+        }
+
+        self.assertEqual("""\
+german
+    a""", str(lsankidb.Db('/path/to/db.anki2')))

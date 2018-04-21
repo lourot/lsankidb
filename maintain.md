@@ -1,5 +1,9 @@
 # Release a new version
 
+## Run the unit tests
+
+See [test/README.md](test/README.md)
+
 ## Increase the version number
 
 In [lsankidb/\__init\__.py](lsankidb/__init__.py) to `7.8.9` in this example.

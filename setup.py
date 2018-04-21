@@ -1,8 +1,8 @@
 from setuptools import setup
-import lsankidb
+import src
 
 setup(name='lsankidb',
-      version=lsankidb.__version__,
+      version=src.__version__,
       install_requires=['AnkiTools'],
       description='"ls" for your local Anki database.',
 
@@ -43,7 +43,7 @@ Dump all your Anki terms in order to save them, search them, ``grep`` them or ``
       author_email='aurelien.lourot@gmail.com',
       url='https://github.com/AurelienLourot/lsankidb',
       download_url='https://github.com/AurelienLourot/lsankidb/tarball/'
-                   + lsankidb.__version__,
+                   + src.__version__,
       license='public domain',
       classifiers=['Development Status :: 4 - Beta',
                    'Environment :: Console',
@@ -51,11 +51,13 @@ Dump all your Anki terms in order to save them, search them, ``grep`` them or ``
                    'License :: Public Domain',
                    'Natural Language :: English',
                    'Operating System :: POSIX :: Linux',
+                   'Programming Language :: Python :: 3.4',
                    'Programming Language :: Python :: 3.5',
+                   'Programming Language :: Python :: 3.6',
                    'Topic :: Education',
                    'Topic :: Utilities'],
-      packages=['lsankidb'],
+      packages=['src'],
       entry_points="""
 [console_scripts]
-lsankidb = lsankidb.lsankidb:main
+lsankidb = src.lsankidb:main
 """)

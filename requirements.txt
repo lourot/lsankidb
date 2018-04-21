@@ -1,1 +1,5 @@
+# Project's dependencies:
 AnkiTools==0.1.6
+
+# Validation tools and dependencies:
+pylint==1.8.1

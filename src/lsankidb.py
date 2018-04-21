@@ -12,24 +12,24 @@ from . import __version__
 
 class Card:
     def __init__(self, content):
-        self.__content = str(content)
+        self.content = str(content)
 
     def __lt__(self, other):
-        return self.__content < other.__content
+        return self.content < other.content
 
     def __str__(self):
-        return self.__content
+        return self.content
 
 class Deck:
     def __init__(self, name):
-        self.__name = name
+        self.name = name
         self.__cards = set()
 
     def __lt__(self, other):
-        return self.__name < other.__name
+        return self.name < other.name
 
     def __str__(self):
-        return self.__name + ''.join('\n    ' + str(card) for card in sorted(self.__cards))
+        return self.name + ''.join('\n    ' + str(card) for card in sorted(self.__cards))
 
     def add(self, card):
         self.__cards.add(card)
@@ -50,7 +50,7 @@ class Db:
             open_function = self.extensions()[extension]
         except KeyError:
             raise KeyError('".{}" extension not supported. Supported extensions: {}'.format(
-                extension, ', '.join('.' + ext for ext in self.extensions().keys())))
+                extension, ', '.join('.' + ext for ext, _ in self.extensions().items())))
 
         with open_function(path) as anki:
             for deck in anki.decks.values():
@@ -65,14 +65,16 @@ def main():
     def find_db_path(search_folder):
         for root, _, files in os.walk(search_folder):
             for name in files:
-                for supported_extension in Db.extensions().keys():
+                for supported_extension, _ in Db.extensions().items():
                     if name.endswith('.' + supported_extension):
                         return os.path.join(root, name)
+        return None
 
     parser = argparse.ArgumentParser(description='"ls" for your local Anki database.')
     parser.add_argument('--version', action='version',
                         version='%(prog)s version ' + __version__)
-    parser.add_argument('PATH', nargs='?',
+    parser.add_argument(
+        'PATH', nargs='?',
         help='path to your DB file (e.g. "~/.local/share/Anki2/User/collection.anki2")')
     args = parser.parse_args(sys.argv[1:])
 

@@ -3,5 +3,5 @@
 import unittest
 
 class LsankidbTests(unittest.TestCase):
-    def test_FIXME(self):
+    def test_fixme(self):
         pass

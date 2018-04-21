@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=no-self-use,invalid-name
+# pylint: disable=no-self-use,invalid-name,protected-access
 
 import sqlite3
 
@@ -52,3 +52,15 @@ class LsankidbTests(TestCase):
 
         with self.assertRaises(sqlite3.OperationalError):
             lsankidb.main()
+
+    @mock.patch('src.lsankidb.os.walk')
+    def test_find_db_path_happy_case(self, mock_walk):
+        mock_walk.return_value = [('/root', [], ['unsupported.ext', 'db.anki2'])]
+
+        self.assertEqual('/root/db.anki2', lsankidb._find_db_path('/search/here'))
+
+    @mock.patch('src.lsankidb.os.walk')
+    def test_find_db_path_sad_case(self, mock_walk):
+        mock_walk.return_value = [('/root', [], ['unsupported.ext', 'unsupported2.ext'])]
+
+        self.assertIsNone(lsankidb._find_db_path('/search/here'))

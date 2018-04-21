@@ -2,6 +2,7 @@
 [![Coverage Status](https://codecov.io/gh/AurelienLourot/lsankidb/branch/master/graph/badge.svg)](https://codecov.io/gh/AurelienLourot/lsankidb)
 [![Requirements Status](https://requires.io/github/AurelienLourot/lsankidb/requirements.svg?branch=master)](https://requires.io/github/AurelienLourot/lsankidb/requirements/?branch=master)
 [![PyPI version](https://badge.fury.io/py/lsankidb.svg)](https://badge.fury.io/py/lsankidb)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lsankidb.svg)](https://badge.fury.io/py/lsankidb)
 
 [<img src="https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png" align="left" width="64" height="64">](https://github.com/AurelienLourot/lsankidb)
 

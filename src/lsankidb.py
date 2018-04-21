@@ -61,25 +61,28 @@ class Db:
     def __str__(self):
         return '\n'.join(str(deck) for deck in sorted(self.__decks.values()))
 
-def main():
-    def find_db_path(search_folder):
-        for root, _, files in os.walk(search_folder):
-            for name in files:
-                for supported_extension, _ in Db.extensions().items():
-                    if name.endswith('.' + supported_extension):
-                        return os.path.join(root, name)
-        return None
-
+def _parse_args():
     parser = argparse.ArgumentParser(description='"ls" for your local Anki database.')
     parser.add_argument('--version', action='version',
                         version='%(prog)s version ' + __version__)
     parser.add_argument(
         'PATH', nargs='?',
         help='path to your DB file (e.g. "~/.local/share/Anki2/User/collection.anki2")')
-    args = parser.parse_args(sys.argv[1:])
+    return parser.parse_args(sys.argv[1:])
+
+def _find_db_path(search_folder):
+    for root, _, files in os.walk(search_folder):
+        for name in files:
+            for supported_extension, _ in Db.extensions().items():
+                if name.endswith('.' + supported_extension):
+                    return os.path.join(root, name)
+    return None
+
+def main():
+    args = _parse_args()
 
     search_folder = os.path.join(os.path.expanduser('~'), '.local/share/Anki2')
-    path = args.PATH if args.PATH else find_db_path(search_folder)
+    path = args.PATH if args.PATH else _find_db_path(search_folder)
     if not path:
         print("""\
 Error: no Anki database found in "{}". Try

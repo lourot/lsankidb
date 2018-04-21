@@ -2,8 +2,9 @@
 AnkiTools==0.1.6
 
 # Validation tools and dependencies:
-pylint==1.8.1
-pytest==3.3.2
+pylint==1.8.4
+pytest==3.5.0
 pytest-cov==2.5.1
 six==1.11.0 # for pytest-cov
-codecov==2.0.12
+codecov==2.0.15
+pur==4.0.3

@@ -51,7 +51,6 @@ Dump all your Anki terms in order to save them, search them, ``grep`` them or ``
                    'License :: Public Domain',
                    'Natural Language :: English',
                    'Operating System :: POSIX :: Linux',
-                   'Programming Language :: Python :: 3.4',
                    'Programming Language :: Python :: 3.5',
                    'Programming Language :: Python :: 3.6',
                    'Topic :: Education',

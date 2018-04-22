@@ -25,12 +25,13 @@ Dump all your Anki terms in order to save them, search them, ``grep`` them or ``
     $ lsankidb
     Listing /home/me/.local/share/Anki2/User 1/collection.anki2 ...
     
-    German
-        ['Hello', 'Hallo']
-        ['How are you?', "Wie geht's?"]
+    Default
     French
         ['Hello', 'Bonjour']
         ['How are you?', 'Comment ça va ?']
+    German
+        ['Hello', 'Hallo']
+        ['How are you?', "Wie geht's?"]
 
 `See on GitHub. <https://github.com/AurelienLourot/lsankidb>`__
 """,

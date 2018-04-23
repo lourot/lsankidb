@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/AurelienLourot/lsankidb.svg?branch=master)](https://travis-ci.org/AurelienLourot/lsankidb)
 [![Coverage Status](https://codecov.io/gh/AurelienLourot/lsankidb/branch/master/graph/badge.svg)](https://codecov.io/gh/AurelienLourot/lsankidb)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/AurelienLourot/lsankidb.svg)](https://codeclimate.com/github/AurelienLourot/lsankidb)
 [![Requirements Status](https://requires.io/github/AurelienLourot/lsankidb/requirements.svg?branch=master)](https://requires.io/github/AurelienLourot/lsankidb/requirements/?branch=master)
 [![PyPI version](https://img.shields.io/pypi/v/lsankidb.svg)](https://pypi.org/pypi/lsankidb/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lsankidb.svg)](https://badge.fury.io/py/lsankidb)

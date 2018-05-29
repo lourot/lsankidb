@@ -7,4 +7,4 @@ pytest==3.6.0
 pytest-cov==2.5.1
 six==1.11.0 # for pytest-cov
 codecov==2.0.15
-pur==4.0.3
+pur==5.0.0

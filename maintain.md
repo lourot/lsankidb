@@ -1,12 +1,5 @@
 # Release a new version
 
-## Pin the latest dependencies
-
-```bash
-$ sudo -H pip3 install -r requirements.txt
-$ pur -r requirements.txt
-```
-
 ## Run all the checks
 
 ```bash

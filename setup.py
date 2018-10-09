@@ -8,7 +8,7 @@ setup(name='lsankidb',
 
       #FIXME this duplicates README.md
       long_description="""
-.. image:: https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png
+.. image:: https://cdn.jsdelivr.net/gh/AurelienLourot/lsankidb@c9735756451d135f94601b816469128e0cdadba2/thirdparty/logo.png
    :height: 64px
    :width: 64px
    :align: right

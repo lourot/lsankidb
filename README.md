@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/lsankidb.svg)](https://pypi.org/pypi/lsankidb/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/lsankidb.svg)](https://badge.fury.io/py/lsankidb)
 
-[<img src="https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png" align="left" width="64" height="64">](https://github.com/AurelienLourot/lsankidb)
+[<img src="https://cdn.jsdelivr.net/gh/AurelienLourot/lsankidb@c9735756451d135f94601b816469128e0cdadba2/thirdparty/logo.png" align="left" width="64" height="64">](https://github.com/AurelienLourot/lsankidb)
 
 # lsankidb
 

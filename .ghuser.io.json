@@ -1,5 +1,5 @@
 {
   "_comment": "Repo metadata for ghuser.io. See https://github.com/ghuser-io/ghuser.io/blob/master/docs/repo-settings.md",
-  "avatar_url": "https://rawgit.com/AurelienLourot/lsankidb/master/thirdparty/logo.png",
+  "avatar_url": "https://cdn.jsdelivr.net/gh/AurelienLourot/lsankidb@c9735756451d135f94601b816469128e0cdadba2/thirdparty/logo.png",
   "techs": ["Travis CI"]
 }
